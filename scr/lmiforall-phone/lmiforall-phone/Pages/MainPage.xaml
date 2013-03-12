@@ -46,7 +46,7 @@
     </phone:PhoneApplicationPage.Foreground>
 
     <Grid x:Name="LayoutRoot" Background="#2980b9">
-        <phone:Panorama Title="Totally Not Top Trumps" Template="{StaticResource PanoramaControlTemplate1}" >
+        <phone:Panorama Title="QuickCompare" Template="{StaticResource PanoramaControlTemplate1}" >
             <phone:PanoramaItem Header="Programmer">
                 <ScrollViewer Margin="17,0,0,0">
                     <StackPanel>
