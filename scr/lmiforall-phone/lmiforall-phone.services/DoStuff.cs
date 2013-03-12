@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Windows;
@@ -14,31 +15,31 @@ using lmiforall.phone_templates;
 
 namespace lmiforall.phone_services
 {
-    public class ApiThing
+    public class MyJsonThing
     {
-        string _results;
-        public string DoStuff()
+        private string x;
+
+        public JobCard DoStuff()
         {
-            System.Uri targetUri = new System.Uri("http://api.lmiforall.org.uk/api/onet/importance/2113");
+            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create("http://api.lmiforall.org.uk/api/onet/levels/2113");
+            request.BeginGetResponse(GetCallback, request);
 
-            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(targetUri);
-            request.BeginGetResponse(new AsyncCallback(ReadWebRequestCallback), request);
 
-            var x = JsonConvert.DeserializeObject<JobCard>(_results);
+            //List<string> x;
+            //JsonConvert.DeserializeObject<JobCard<JobCard.RootObject>>();
 
-            return "AAAA";
+            return new JobCard();
+
         }
-        private void ReadWebRequestCallback(IAsyncResult callbackResult)
-        {
-            HttpWebRequest myRequest = (HttpWebRequest)callbackResult.AsyncState;
-            HttpWebResponse myResponse = (HttpWebResponse)myRequest.EndGetResponse(callbackResult);
 
-            using (StreamReader httpwebStreamReader = new StreamReader(myResponse.GetResponseStream()))
+        private void GetCallback(IAsyncResult result)
+        {
+            HttpWebRequest request = result.AsyncState as HttpWebRequest;
+            if (request != null)
             {
-                 _results = httpwebStreamReader.ReadToEnd();
+                WebResponse response = request.EndGetResponse(result);
+                x = response.GetResponseStream().ToString();
             }
-            myResponse.Close();
         }
-
     }
 }

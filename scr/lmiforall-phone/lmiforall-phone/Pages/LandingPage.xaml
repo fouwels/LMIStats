@@ -54,7 +54,7 @@
             <TextBlock Text="Enter your Location"/>
             <TextBox x:Name="UserLocation" BorderBrush="#2c3e50" Background="#30FFFFFF" InputScope="EmailSmtpAddress"/>
             <TextBlock Text="Enter your Age" />
-            <PasswordBox x:Name="UserAge" BorderBrush="#2c3e50" Background="#30FFFFFF"/>
+            <TextBox InputScope="Number" x:Name="UserAge" BorderBrush="#2c3e50" Background="#30FFFFFF"/>
             <Button Content="Fetch data!" x:Name="UserSubmit" Margin="0,25,0,0" BorderBrush="#2c3e50" Click="UserGo_OnClick" />
         </StackPanel>
         <Ellipse x:Name="Spinner" Fill="{StaticResource PhoneForegroundBrush}" Height="50" Width="50" Grid.Column="1" Grid.Row="3" Visibility="Collapsed" >

@@ -27,8 +27,7 @@ namespace lmiforall_phone.Pages
 
         private void UserGo_OnClick(object sender, RoutedEventArgs e)
         {
-            //var a = new ApiThing();
-            //var B = a.DoStuff();
+            SpinningAnimation.Begin();
             NavigationService.Navigate(new Uri("/Pages/MainPage.xaml", UriKind.Relative));
         }
     }

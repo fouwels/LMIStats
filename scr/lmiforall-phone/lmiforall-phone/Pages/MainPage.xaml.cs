@@ -15,6 +15,12 @@ namespace lmiforall_phone
     public partial class MainPage : PhoneApplicationPage
     {
         // Constructor
+        public int RandomNumber()
+        {
+            var random = new Random();
+            return random.Next(0, 100);
+        }
+
         public MainPage()
         {
             InitializeComponent();
@@ -30,7 +36,10 @@ namespace lmiforall_phone
             {
                 App.ViewModel.LoadData();
             }
-           
+
+            var x = new MyJsonThing();
+            x.DoStuff();
+
         }
     }
 }
