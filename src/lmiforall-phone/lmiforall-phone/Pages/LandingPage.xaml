@@ -43,10 +43,10 @@
 
         <StackPanel Grid.Row="1" Grid.Column="1" Grid.RowSpan="4">
             <TextBlock Style="{StaticResource PhoneTextTitle1Style}" 
-                       Text="Rainbow Rangers" 
+                       Text="Lmiforall - phone" 
                        FontSize="35"/>
             <TextBlock Style="{StaticResource PhoneTextTitle1Style}" Margin="12,-11,12,0"
-                       Text="FillerName"
+                       Text="Quick Stats!"
                        FontSize="60" />
         </StackPanel>
 
