@@ -43,6 +43,8 @@
     <phone:PhoneApplicationPage.Foreground>
         <StaticResource ResourceKey="PhoneForegroundBrush"/>
     </phone:PhoneApplicationPage.Foreground>
+	
+	<!-- VERY CRUDE DEMO HACKING! *should* be a templated listview databound to _jobcards >.> -->
 
     <Grid x:Name="LayoutRoot" Background="#2980b9">
         <phone:Panorama Title="QuickCompare" Template="{StaticResource PanoramaControlTemplate1}" >
