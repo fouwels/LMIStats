@@ -25,7 +25,7 @@ namespace lmiforall_phone
         }
 
         // Load data for the ViewModel Items
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected async override void OnNavigatedTo(NavigationEventArgs e)
         {
             if (!App.ViewModel.IsDataLoaded)
             {
@@ -33,7 +33,7 @@ namespace lmiforall_phone
             }
 
 	        var gapi = new ApiInteract();
-	        _jobCards = gapi.GetData().Result;
+	        _jobCards = await gapi.GetData();
 
         }
     }

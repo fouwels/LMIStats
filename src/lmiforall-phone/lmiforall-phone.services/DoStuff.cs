@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Net;
 using System.Threading.Tasks;
@@ -23,18 +24,24 @@ namespace lmiforall_phone.services
 			var request = (HttpWebRequest)WebRequest.Create("http://api.lmiforall.org.uk/api/onet/levels/2113");
 			var response = await request.GetResponseAsync();
 
-			string temp;
+			string responsePage;
 
 			using (var stream = response.GetResponseStream())
 			{
 				using (var reader = new StreamReader(stream))
 				{
-					temp = reader.ReadToEnd();
+					responsePage = reader.ReadToEnd();
 				}
 			}
 
-			return JsonConvert.DeserializeObject<List<JobCard.Root>>(temp);
-
+			if (response.StatusCode == HttpStatusCode.Accepted)
+			{
+				return JsonConvert.DeserializeObject<List<JobCard.Root>>(responsePage);
+			}
+			else
+			{
+				return new List<JobCard.Root>();
+			}
 		}
 	}
 }
