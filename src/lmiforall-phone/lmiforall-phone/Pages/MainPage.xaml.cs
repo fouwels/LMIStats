@@ -11,7 +11,7 @@ namespace lmiforall_phone
 {
     public partial class MainPage : PhoneApplicationPage
     {
-	    private List<JobCard.Root> _jobCards; 
+	    private List<JobCard.Root> _jobCards = new List<JobCard.Root>(); 
 
         public MainPage()
         {
