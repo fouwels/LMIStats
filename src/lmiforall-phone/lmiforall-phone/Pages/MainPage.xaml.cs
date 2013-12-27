@@ -1,10 +1,7 @@
-﻿using System;
-using System.Net;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Windows.Navigation;
 using lmiforall_phone.templates;
 using Microsoft.Phone.Controls;
-using Microsoft.Phone.Shell;
 using lmiforall_phone.services;
 
 namespace lmiforall_phone
@@ -16,13 +13,19 @@ namespace lmiforall_phone
         public MainPage()
         {
             InitializeComponent();
-	        // Listview source = _jobCards;
+	        //todo Listview source = _jobCards;
+			//todo xaml
         }
         protected async override void OnNavigatedTo(NavigationEventArgs e)
 		{
 			//SOCS to display
 			var socBank = new Dictionary<string, string>(); //SOC Code -> Job name
 			socBank.Add("2113", "Programmer");
+			socBank.Add("2114", "unknown");
+			socBank.Add("2115", "unknown");
+			socBank.Add("2116", "unknown");
+			socBank.Add("2117", "unknown");
+			socBank.Add("2118", "unknown");
 
 			var gapi = new ApiInteract();
 
