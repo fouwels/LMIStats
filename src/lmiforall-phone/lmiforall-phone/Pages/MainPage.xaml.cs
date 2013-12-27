@@ -5,6 +5,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Navigation;
+using lmiforall_phone.templates;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using lmiforall_phone.services;
@@ -13,19 +14,14 @@ namespace lmiforall_phone
 {
     public partial class MainPage : PhoneApplicationPage
     {
-        // Constructor
-        public int RandomNumber()
-        {
-            var random = new Random();
-            return random.Next(0, 100);
-        }
+	    private List<JobCard.Root> _jobCards; 
 
         public MainPage()
         {
             InitializeComponent();
 
             // Set the data context of the listbox control to the sample data
-            DataContext = App.ViewModel;
+	        // Listview source = _jobCards;
         }
 
         // Load data for the ViewModel Items
@@ -37,7 +33,7 @@ namespace lmiforall_phone
             }
 
 	        var gapi = new ApiInteract();
-	        var y = gapi.GetData().Result;
+	        _jobCards = gapi.GetData().Result;
 
         }
     }
