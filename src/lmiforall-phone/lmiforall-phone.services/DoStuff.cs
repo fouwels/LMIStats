@@ -19,9 +19,10 @@ namespace lmiforall_phone.services
 {
 	public class ApiInteract
 	{
-		public async Task<List<JobCard.Root>> GetData()
+		public async Task<JobCard.Root> GetONET(string level)
 		{
-			var request = (HttpWebRequest)WebRequest.Create("http://api.lmiforall.org.uk/api/onet/levels/2113");
+			var request = (HttpWebRequest)WebRequest.Create("http://api.lmiforall.org.uk/api/v1/onet/levels/" + level);
+
 			var response = await request.GetResponseAsync();
 
 			string responsePage;
@@ -34,13 +35,22 @@ namespace lmiforall_phone.services
 				}
 			}
 
-			if (response.StatusCode == HttpStatusCode.Accepted)
+			if (response.StatusCode == HttpStatusCode.OK)
 			{
-				return JsonConvert.DeserializeObject<List<JobCard.Root>>(responsePage);
+				try
+				{
+					var x = JsonConvert.DeserializeObject<JobCard.Root>(responsePage);
+					return x;
+				}
+				catch (Exception ex)
+				{
+					throw;
+				}
+				
 			}
 			else
 			{
-				return new List<JobCard.Root>();
+				return new JobCard.Root();
 			}
 		}
 	}

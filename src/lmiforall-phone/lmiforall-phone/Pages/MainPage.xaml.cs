@@ -17,13 +17,20 @@ namespace lmiforall_phone
         {
             InitializeComponent();
 	        // Listview source = _jobCards;
-
         }
         protected async override void OnNavigatedTo(NavigationEventArgs e)
-        {
-	        var gapi = new ApiInteract();
-	        _jobCards = await gapi.GetData();
+		{
+			//SOCS to display
+			var socBank = new Dictionary<string, string>(); //SOC Code -> Job name
+			socBank.Add("2113", "Programmer");
 
+			var gapi = new ApiInteract();
+
+			foreach (var soc in socBank.Keys)
+			{
+				var y = await gapi.GetONET(soc);
+				_jobCards.Add(y);
+			}
         }
     }
 }
