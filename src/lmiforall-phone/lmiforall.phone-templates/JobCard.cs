@@ -12,21 +12,20 @@ using System.Windows.Shapes;
 
 namespace lmiforall_phone.templates
 {
-    public class JobCard
-    {
-        public class Skill
-        {
-            public string name { get; set; }
-            public double score { get; set; }
-            public int rank { get; set; }
-        }
+	public class JobCard
+	{
+		public class Skill
+		{
+			public string name { get; set; }
+			public double score { get; set; }
+			public int rank { get; set; }
+		}
 
-        public class RootObject
-        {
-            public string infotype { get; set; }
-            public int soc { get; set; }
-            public List<Skill> skills { get; set; }
-        }
-
-    }
+		public class Root
+		{
+			public string infotype { get; set; }
+			public int soc { get; set; }
+			public List<Skill> skills { get; set; }
+		}
+	}
 }

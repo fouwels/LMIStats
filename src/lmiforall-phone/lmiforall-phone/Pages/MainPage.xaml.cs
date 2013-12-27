@@ -8,7 +8,6 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using lmiforall_phone.services;
-using lmiforall.phone_templates;
 
 namespace lmiforall_phone
 {
@@ -37,8 +36,8 @@ namespace lmiforall_phone
                 App.ViewModel.LoadData();
             }
 
-            var x = new MyJsonThing();
-            x.DoStuff();
+	        var gapi = new ApiInteract();
+	        var y = gapi.GetData().Result;
 
         }
     }

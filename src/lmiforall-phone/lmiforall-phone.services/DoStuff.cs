@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Net;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Documents;
@@ -15,29 +16,25 @@ using Newtonsoft.Json;
 
 namespace lmiforall_phone.services
 {
-    public class MyJsonThing
-    {
-        private string x;
+	public class ApiInteract
+	{
+		public async Task<List<JobCard.Root>> GetData()
+		{
+			var request = (HttpWebRequest)WebRequest.Create("http://api.lmiforall.org.uk/api/onet/levels/2113");
+			var response = await request.GetResponseAsync();
 
-        public JobCard DoStuff()
-        {
-            var request = (HttpWebRequest)HttpWebRequest.Create("http://api.lmiforall.org.uk/api/onet/levels/2113");
-            var x = request.BeginGetResponse(GetCallback, request);
+			string temp;
 
-            JsonConvert.DeserializeObject<JobCard<JobCard.RootObject>>(x);
+			using (var stream = response.GetResponseStream())
+			{
+				using (var reader = new StreamReader(stream))
+				{
+					temp = reader.ReadToEnd();
+				}
+			}
 
-            return new JobCard();
+			return JsonConvert.DeserializeObject<List<JobCard.Root>>(temp);
 
-        }
-
-        private void GetCallback(IAsyncResult result)
-        {
-            var request = result.AsyncState as HttpWebRequest;
-            if (request != null)
-            {
-                WebResponse response = request.EndGetResponse(result);
-                x = response.GetResponseStream().ToString();
-            }
-        }
-    }
+		}
+	}
 }
