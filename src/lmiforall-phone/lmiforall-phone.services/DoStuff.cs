@@ -10,10 +10,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
+using lmiforall_phone.templates;
 using Newtonsoft.Json;
-using lmiforall.phone_templates;
 
-namespace lmiforall.phone_services
+namespace lmiforall_phone.services
 {
     public class MyJsonThing
     {
@@ -21,12 +21,10 @@ namespace lmiforall.phone_services
 
         public JobCard DoStuff()
         {
-            HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create("http://api.lmiforall.org.uk/api/onet/levels/2113");
-            request.BeginGetResponse(GetCallback, request);
+            var request = (HttpWebRequest)HttpWebRequest.Create("http://api.lmiforall.org.uk/api/onet/levels/2113");
+            var x = request.BeginGetResponse(GetCallback, request);
 
-
-            //List<string> x;
-            //JsonConvert.DeserializeObject<JobCard<JobCard.RootObject>>();
+            JsonConvert.DeserializeObject<JobCard<JobCard.RootObject>>(x);
 
             return new JobCard();
 
@@ -34,7 +32,7 @@ namespace lmiforall.phone_services
 
         private void GetCallback(IAsyncResult result)
         {
-            HttpWebRequest request = result.AsyncState as HttpWebRequest;
+            var request = result.AsyncState as HttpWebRequest;
             if (request != null)
             {
                 WebResponse response = request.EndGetResponse(result);

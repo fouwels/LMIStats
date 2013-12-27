@@ -7,7 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
-using lmiforall.phone_services;
+using lmiforall_phone.services;
 using lmiforall.phone_templates;
 
 namespace lmiforall_phone

@@ -10,7 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 
-namespace lmiforall.phone_templates
+namespace lmiforall_phone.templates
 {
     public class JobCard
     {
