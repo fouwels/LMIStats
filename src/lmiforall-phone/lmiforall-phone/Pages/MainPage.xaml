@@ -9,7 +9,8 @@
     x:Class="lmiforall_phone.MainPage"
     mc:Ignorable="d"
     SupportedOrientations="Portrait"  Orientation="Portrait"
-    shell:SystemTray.IsVisible="False">
+    shell:SystemTray.IsVisible="False"
+	DataContext="{Binding RelativeSource={RelativeSource Self}}">
 
     <phone:PhoneApplicationPage.Resources>
         <ControlTemplate x:Key="PanoramaControlTemplate1" TargetType="phone:Panorama">
@@ -47,367 +48,49 @@
 	<!-- VERY CRUDE DEMO HACKING! *should* be a templated listview databound to _jobcards >.> -->
 
     <Grid x:Name="LayoutRoot" Background="#2980b9">
-        <phone:Panorama Title="QuickCompare" Template="{StaticResource PanoramaControlTemplate1}" >
-            <phone:PanoramaItem Header="Programmer">
-                <ScrollViewer Margin="17,0,0,0">
-                    <StackPanel>
-                        <TextBlock Text="Mathematical Reasoning"/>
-                        <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                        <TextBlock Text="Programming"/>
-                        <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                        <TextBlock Text="Technology Design"/>
-                        <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                        <TextBlock Text="Number Facility"/>
-                        <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                        <TextBlock Text="Science"/>
-                        <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                        <TextBlock Text="Mathematics"/>
-                        <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                        <TextBlock Text="Information Ordering"/>
-                        <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                        <TextBlock Text="Deductive Reasoning"/>
-                        <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                        <TextBlock Text="STEM 1st principal component score"/>
-                        <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                        <TextBlock Text="STEM mean score across skill components"/>
-                        <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                    </StackPanel>
-                </ScrollViewer>
-            </phone:PanoramaItem>
-            <phone:PanoramaItem Header="Physicist">
-                    <ScrollViewer Margin="17,0,0,0">
-                        <StackPanel>
-                            <TextBlock Text="Mathematical Reasoning"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Programming"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Technology Design"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Number Facility"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Science"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Mathematics"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Information Ordering"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Deductive Reasoning"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="STEM 1st principal component score"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="STEM mean score across skill components"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                        </StackPanel>
-                    </ScrollViewer>
-                </phone:PanoramaItem>
-                <phone:PanoramaItem Header="Mathematician">
-                    <ScrollViewer Margin="17,0,0,0">
-                        <StackPanel>
-                            <TextBlock Text="Mathematical Reasoning"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Programming"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Technology Design"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Number Facility"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Science"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Mathematics"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Information Ordering"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Deductive Reasoning"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="STEM 1st principal component score"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="STEM mean score across skill components"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                        </StackPanel>
-                    </ScrollViewer>
-                </phone:PanoramaItem>
-                <phone:PanoramaItem Header="Astrophisicist">
-                    <ScrollViewer Margin="17,0,0,0">
-                        <StackPanel>
-                            <TextBlock Text="Mathematical Reasoning"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Programming"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Technology Design"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Number Facility"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Science"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Mathematics"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Information Ordering"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Deductive Reasoning"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="STEM 1st principal component score"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="STEM mean score across skill components"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                        </StackPanel>
-                    </ScrollViewer>
-                </phone:PanoramaItem>
-                <phone:PanoramaItem Header="Mechanical Engineer">
-                    <ScrollViewer Margin="17,0,0,0">
-                        <StackPanel>
-                            <TextBlock Text="Mathematical Reasoning"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Programming"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Technology Design"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Number Facility"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Science"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Mathematics"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Information Ordering"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Deductive Reasoning"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="STEM 1st principal component score"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="STEM mean score across skill components"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                        </StackPanel>
-                    </ScrollViewer>
-                </phone:PanoramaItem>
-                <phone:PanoramaItem Header="Doctor">
-                    <ScrollViewer Margin="17,0,0,0">
-                        <StackPanel>
-                            <TextBlock Text="Mathematical Reasoning"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Programming"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Technology Design"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Number Facility"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Science"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Mathematics"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Information Ordering"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Deductive Reasoning"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="STEM 1st principal component score"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="STEM mean score across skill components"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                        </StackPanel>
-                    </ScrollViewer>
-                </phone:PanoramaItem>
-                <phone:PanoramaItem Header="Chemist">
-                    <ScrollViewer Margin="17,0,0,0">
-                        <StackPanel>
-                            <TextBlock Text="Mathematical Reasoning"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Programming"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Technology Design"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Number Facility"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Science"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Mathematics"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Information Ordering"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Deductive Reasoning"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="STEM 1st principal component score"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="STEM mean score across skill components"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                        </StackPanel>
-                    </ScrollViewer>
-                </phone:PanoramaItem>
-                <phone:PanoramaItem Header="E. Engineer">
-                    <ScrollViewer Margin="17,0,0,0">
-                        <StackPanel>
-                            <TextBlock Text="Mathematical Reasoning"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Programming"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Technology Design"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Number Facility"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Science"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Mathematics"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Information Ordering"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Deductive Reasoning"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="STEM 1st principal component score"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="STEM mean score across skill components"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                        </StackPanel>
-                    </ScrollViewer>
-                </phone:PanoramaItem>
-                <phone:PanoramaItem Header="M. Engineer">
-                    <ScrollViewer Margin="17,0,0,0">
-                        <StackPanel>
-                            <TextBlock Text="Mathematical Reasoning"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Programming"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Technology Design"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Number Facility"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Science"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Mathematics"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Information Ordering"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Deductive Reasoning"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="STEM 1st principal component score"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="STEM mean score across skill components"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                        </StackPanel>
-                    </ScrollViewer>
-                </phone:PanoramaItem>
-                <phone:PanoramaItem Header="Dentist">
-                    <ScrollViewer Margin="17,0,0,0">
-                        <StackPanel>
-                            <TextBlock Text="Mathematical Reasoning"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Programming"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Technology Design"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Number Facility"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Science"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Mathematics"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Information Ordering"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="Deductive Reasoning"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="STEM 1st principal component score"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                            <TextBlock Text="STEM mean score across skill components"/>
-                            <TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
-							Text="100"/>
-                        </StackPanel>
-                    </ScrollViewer>
-                </phone:PanoramaItem>
-        </phone:Panorama>
+        <phone:Panorama Title="QuickCompare" Template="{StaticResource PanoramaControlTemplate1}" x:Name="pano" ItemsSource="{Binding JobCards}">
+			<phone:Panorama.ItemTemplate>
+			<DataTemplate>
+				<StackPanel Margin="17,0,0,0">
+				<!--TextBlock Text="{Binding soc}" Style="{StaticResource PanoramaItemHeaderTextStyle}"/-->
+					<ScrollViewer>
+					<ListBox>
+						<ListBoxItem>
+							<StackPanel>
+								<TextBlock Text="Programming"/>
+								<TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
+								Text="{Binding skills[0].score}"/> <!-- yolo-->
+								<TextBlock Text="Technology Design"/>
+								<TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
+								Text="{Binding skills[1].score}"/>
+								<TextBlock Text="Number Facility"/>
+								<TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
+								Text="{Binding skills[2].score}"/>
+								<TextBlock Text="Science"/>
+								<TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
+								Text="{Binding skills[3].score}"/>
+								<TextBlock Text="Mathematics"/>
+								<TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
+								Text="{Binding skills[4].score}"/>
+								<TextBlock Text="Information Ordering"/>
+								<TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
+								Text="{Binding skills[5].score}"/>
+								<TextBlock Text="Deductive Reasoning"/>
+								<TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
+								Text="{Binding skills[6].score}"/>
+								<TextBlock Text="STEM 1st principal component score"/>
+								<TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
+								Text="{Binding skills[7].score}"/>
+								<TextBlock Text="STEM mean score across skill components"/>
+								<TextBox BorderBrush="Transparent" Background="#30FFFFFF" TextAlignment="Center"
+								Text="{Binding skills[8].score}"/>
+							</StackPanel>
+						</ListBoxItem>
+					</ListBox>
+				</ScrollViewer>
+					</StackPanel>
+			</DataTemplate>
+			</phone:Panorama.ItemTemplate>
+		</phone:Panorama>
     </Grid>
 </phone:PhoneApplicationPage>

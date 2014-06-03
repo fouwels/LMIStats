@@ -1,0 +1,9 @@
+E:\Source\Work\Hacks\2013\LMI for all\LMIforWP8.0\src\lmiforall-phone\lmiforall-phone.services\Bin\Debug\lmiforall-phone.services.dll
+E:\Source\Work\Hacks\2013\LMI for all\LMIforWP8.0\src\lmiforall-phone\lmiforall-phone.services\Bin\Debug\lmiforall-phone.services.pdb
+E:\Source\Work\Hacks\2013\LMI for all\LMIforWP8.0\src\lmiforall-phone\lmiforall-phone.services\Bin\Debug\lmiforall-phone.templates.dll
+E:\Source\Work\Hacks\2013\LMI for all\LMIforWP8.0\src\lmiforall-phone\lmiforall-phone.services\Bin\Debug\Newtonsoft.Json.dll
+E:\Source\Work\Hacks\2013\LMI for all\LMIforWP8.0\src\lmiforall-phone\lmiforall-phone.services\Bin\Debug\lmiforall-phone.templates.pdb
+E:\Source\Work\Hacks\2013\LMI for all\LMIforWP8.0\src\lmiforall-phone\lmiforall-phone.services\Bin\Debug\Newtonsoft.Json.xml
+E:\Source\Work\Hacks\2013\LMI for all\LMIforWP8.0\src\lmiforall-phone\lmiforall-phone.services\obj\Debug\lmiforall-phone.services.csprojResolveAssemblyReference.cache
+E:\Source\Work\Hacks\2013\LMI for all\LMIforWP8.0\src\lmiforall-phone\lmiforall-phone.services\obj\Debug\lmiforall-phone.services.dll
+E:\Source\Work\Hacks\2013\LMI for all\LMIforWP8.0\src\lmiforall-phone\lmiforall-phone.services\obj\Debug\lmiforall-phone.services.pdb

@@ -40,6 +40,10 @@ namespace lmiforall_phone.services
 				try
 				{
 					var x = JsonConvert.DeserializeObject<JobCard.Root>(responsePage);
+					foreach (var skill in x.skills)
+					{
+						skill.score = skill.score*100; //better numbers
+					}
 					return x;
 				}
 				catch (Exception ex)

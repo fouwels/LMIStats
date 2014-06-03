@@ -1,0 +1,4 @@
+E:\Source\Work\Hacks\2013\LMI for all\LMIforWP8.0\src\lmiforall-phone\lmiforall.phone-templates\Bin\Debug\lmiforall-phone.templates.dll
+E:\Source\Work\Hacks\2013\LMI for all\LMIforWP8.0\src\lmiforall-phone\lmiforall.phone-templates\Bin\Debug\lmiforall-phone.templates.pdb
+E:\Source\Work\Hacks\2013\LMI for all\LMIforWP8.0\src\lmiforall-phone\lmiforall.phone-templates\obj\Debug\lmiforall-phone.templates.dll
+E:\Source\Work\Hacks\2013\LMI for all\LMIforWP8.0\src\lmiforall-phone\lmiforall.phone-templates\obj\Debug\lmiforall-phone.templates.pdb
